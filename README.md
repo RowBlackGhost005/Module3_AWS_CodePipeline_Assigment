@@ -155,3 +155,15 @@ If everything is OK, click on `Create Pipeline`
 
 ![Setup Review](doc/images/pipeline-s7.png)
 
+Once finished the pipeline should start working automatically on the deployment on what is currently available in the Git Hub Repository.
+
+![Pipeline Overview](doc/images/pipeline-overview.png)
+
+Now, this first build might fail because we set it up in a way that in the 'Build' phase it will automatically replace the files from the GitHub repo to our S3 bucket, so now we need to add the permissions to that role.
+
+## Setup Permissions for Pipeline
+Now we will be granting access to our S3 Bucket to our Pipeline to write and delete files, to do this go to `IAM` in the AWS Dashboard.
+
+Then go to `Roles` and look for the automatic role generated for the pipeline, it should be called something like `AWSCodePipelineServiceRole-region-name`, then click on it.
+
+Once in is settings go to to
