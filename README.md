@@ -69,7 +69,18 @@ In Edit Bucket Policy screen we will be adding the next JSON Permission:
 Now click on `Save Changes`
 ![S3 Permissions](doc/images/s3-permissions.png)
 
+Now that we granted access we need to setup our S3 bucket to host the webpage, for this go to the `Properties` tab in our S3 bucket and scroll down to the `Static Website Hosting` here click `Edit`.
+
+Now inthis screen `Enable` Static Web Hosting and select `Host a Static Website`.
+
+Down below under `Index document` input the name of the html file that we are going to host, in this case is `Index.html`
+
+Now there no more changes needed here, go ahead an click `Save Changes`
+![Enable Web Hosting](doc/images/s3-enable-static.png)
+
 Now our S3 bucket is ready to host our HTML Webpage and users will be able to access to it.
+
+If you go back to the Static Website Hosting secction you now will see the URL to access the web page, save it for later once our CI/CD pipeline is ready to deploy changes.
 
 ## Setup AWS Code Pipeline
 Now that everything around the pipeline is ready we will be setting it up all together.
@@ -198,3 +209,25 @@ It should end up looking like this, be mindful to keep the JSON format intact, a
 ![Policy Edit](doc/images/codebuild-policy-edit.png)
 
 Now our CodeBuild section of our pipeline has access to our S3 bucket and its going to be able to put the files of our GitHub into the S3 bucket.
+
+## Confirm Pipeline
+Now that the permissions are in place, our pipeline is going to run smootly, now make some changes in the HTML file and push it to the Git Hub repo, it should automatically trigger a Deployment.
+
+And here it is after one change, everything is setup ande deployed.
+![Deployment Stage](doc/images/pipeline-working.png)
+
+
+## Access The Website
+Now that our website is deployed lets use the URL of the static website that we got earlier, if you don't have it go to:
+
+(`S3 > Bucket > #Name#`), then Properties tab then Static Website Hosting, there should be a URL for accessing our website.
+
+In my case is: http://ci-cd-bucket-csa.s3-website-us-east-1.amazonaws.com/
+
+And if I use the browser to get to it, I get this:
+![Website](doc/images/website-1.png)
+
+So our website works and now its deployed completely automatically!
+
+# Check Deployment of Changes
+Lets modify the HTML to add another card and see if the page actually reflects the changes.
