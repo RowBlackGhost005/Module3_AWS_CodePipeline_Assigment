@@ -173,4 +173,6 @@ Now we will be granting access to our S3 Bucket to our Pipeline to write and del
 
 Then go to `Roles` and look for the automatic role generated for the Code Build, it should be called something like `codebuild-HTML-CI-CD-service-role`, then click on it.
 
-Once in is settings go to to `Add Permissions` then `Attach Policies`
+Once in is settings go to to `Add Permissions` then `Attach Policies`.
+
+Here look for the policy we just created, check it and click on `save`
