@@ -172,7 +172,29 @@ Now, this first build might fail because we set it up in a way that in the 'Buil
 Now we will be granting access to our S3 Bucket to our Pipeline to write and delete files, to do this go to `IAM` in the AWS Dashboard.
 
 Then go to `Roles` and look for the automatic role generated for the Code Build, it should be called something like `codebuild-HTML-CI-CD-service-role`, then click on it.
+(Note that it need to start with `codebuild`)
 
-Once in is settings go to to `Add Permissions` then `Attach Policies`.
+Once in the settings, it should have one policy attached that was auto generated, lets edit this so we can add the policy directly to avoid creating a new one. So click on it
 
-Here look for the policy we just created, check it and click on `save`
+Here click on `Edit`.
+![Policies Screen](doc/images/policies-mainscreen.png)
+
+On the edit page select `JSON` to be able to see the policy in a JSON format and scroll down to the last policy object and add a `,`, then paste this policy:
+
+*Note: Replace BUCKETNAME with the actual name of the bucket we created earlier*
+```JSON
+{
+    "Effect": "Allow",
+    "Action": [
+        "s3:GetObject",
+        "s3:PutObject"
+    ],
+  "Resource": "arn:aws:s3:::BUCKETNAME/*"
+}
+```
+
+
+It should end up looking like this, be mindful to keep the JSON format intact, and the click `Next`
+![Policy Edit](doc/images/codebuild-policy-edit.png)
+
+Now our CodeBuild section of our pipeline has access to our S3 bucket and its going to be able to put the files of our GitHub into the S3 bucket.
