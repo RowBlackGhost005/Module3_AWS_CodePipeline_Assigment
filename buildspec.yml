@@ -3,7 +3,8 @@ version: 0.2
 phases:
   build:
     commands:
-      - aws s3 sync . s3://ci-cd-bucket-csa --delete
+      - echo "Syncing necessary files..."
+      - aws s3 sync . s3://ci-cd-bucket-csa --delete --exclude "doc/*" --exclude "README.md"
 
 artifacts:
   files:
