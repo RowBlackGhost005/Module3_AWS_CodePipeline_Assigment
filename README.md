@@ -41,7 +41,7 @@ In this screen enable `Static Website hosting` and set the name of the `Index` d
 
 ![S3 Enable Hosting](doc/images/s3-enable-static.png)
 
-For this basic setup these are all the settings required, scropp down an click `Save Changes`.
+For this basic setup of S3 web hosting these are all the configurations, now scroll down and click `Save Changes`.
 
 ### Enable Public Access
 Now we will be granting public access to our S3 bucket objects so the users can be able to reach the site.
