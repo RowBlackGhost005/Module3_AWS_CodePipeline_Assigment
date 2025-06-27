@@ -237,4 +237,22 @@ In my case these cards work using a JSON object, so all I need to do is add a ne
 
 ![html edit](doc/images/html-edit.png)
 
-I push the changes into github and we will wait.
+I push the changes into github and the pipe line pick it up and started the process of deployment.
+
+![Overview Pipeline](doc/images/pipeline-change-overview.png)
+
+After a few moments I got the sucessfull message
+
+![Overview Pipeline](doc/images/pipeline-change-finished.png)
+
+And if I go to the website I see that in fact it got updated automatically based on my changes.
+
+![Website](doc/images/website-2.png)
+
+# Summary
+By using AWS CodePipeline in integration with GitHub and setting up a CodeBuild project we are able to setup a basic CI/CD enviroment to push our changes to production directly from Github automatically, this saves time in the deployment process.
+
+And due to how we setup this project is easy to 're-use' this setup for a more complex approach, like actually building something in the 'Build' stage instead of just copying files, this provies how this kind of workflows altough difficult to setup at times are able to save us a ton of time once setup correctly.
+
+# Credits
+Developed by: Luis Marin
