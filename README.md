@@ -1,6 +1,6 @@
 # CI/CD Pipeline with AWS Code Pipeline.
 
-In this assigment I created a CI/CD Pipeline using AWS Code Pipeline.
+In this assigment I created a CI/CD Pipeline using AWS Code Pipeline to automate the deployment of a simple static HTML page.
 
 # Requirements
 An AWS Account
