@@ -231,3 +231,9 @@ So our website works and now its deployed completely automatically!
 
 # Check Deployment of Changes
 Lets modify the HTML to add another card and see if the page actually reflects the changes.
+
+In my case these cards work using a JSON object, so all I need to do is add a new object and it should appear one more card.
+
+![html edit](doc/images/html-edit.png)
+
+I push the changes into github and we will wait.
