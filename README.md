@@ -171,6 +171,6 @@ Now, this first build might fail because we set it up in a way that in the 'Buil
 ## Setup Permissions for Pipeline
 Now we will be granting access to our S3 Bucket to our Pipeline to write and delete files, to do this go to `IAM` in the AWS Dashboard.
 
-Then go to `Roles` and look for the automatic role generated for the pipeline, it should be called something like `AWSCodePipelineServiceRole-region-name`, then click on it.
+Then go to `Roles` and look for the automatic role generated for the Code Build, it should be called something like `codebuild-HTML-CI-CD-service-role`, then click on it.
 
 Once in is settings go to to `Add Permissions` then `Attach Policies`
