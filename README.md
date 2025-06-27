@@ -203,7 +203,7 @@ Now our CodeBuild section of our pipeline has access to our S3 bucket and its go
 ## Confirm Pipeline
 Now that the permissions are in place, our pipeline is going to run smootly, now make some changes in the HTML file and push it to the Git Hub repo, it should automatically trigger a Deployment.
 
-And here it is after one change, everything is setup ande deployed.
+And here it is after one change, everything is setup and deployed.
 ![Deployment Stage](doc/images/pipeline-working.png)
 
 
