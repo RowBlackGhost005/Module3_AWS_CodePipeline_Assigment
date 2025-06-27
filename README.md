@@ -143,10 +143,17 @@ Now with the Build Project integrated we can coninue leaving everything in here 
 Now we will be `skipping` the Test Stage because our simple static webpage has noting else to be tested, so go ahead and click `Skip Test Stage`
 ![Setup Add Test](doc/images/pipeline-s5.png)
 
-On the Add Deploy Stage screen we will also `skip` it because on our Build stage we setup that our code will be transfered to S3, so the 'deploy' already happens there.
+On the Add Deploy Stage screen we will setting up the deployment rules of our artifacts that were setup for creation in the 'build' stage, in this case basically is going to select our index.html and thats all.
 
-In case we had done that here we would have selected Build Artifact defined by Source and the Provider to be an Amazon S3, this due to how this pipeline operates, basically copying files from one site to another.
+Here we select `AmazonS3` as the deploy provider, make sure the region is in the same where your pipe line is.
 
+In the Input Artifact section select `Build artifact`, this is telling that S3 is going to store whatever comes from build, and from build we specify that only our index.html is going through.
+
+Then select a bucket based on the name.
+
+And last select the `S3 Key` which is a file or folder where the project is going to be put, in this case just add `/` to deploy the files at the root of the bucket.
+
+Then click `Next`
 ![Setup Deploy](doc/images/pipeline-s6.png)
 
 In the last step we just need to make sure all of the settings are correctly set, here you can also review what we have done and if anything need changes you can go back in the step process.
