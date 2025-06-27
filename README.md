@@ -198,7 +198,8 @@ On the edit page select `JSON` to be able to see the policy in a JSON format and
     "Effect": "Allow",
     "Action": [
         "s3:GetObject",
-        "s3:PutObject"
+        "s3:PutObject",
+        "s3:DeleteObject"
     ],
   "Resource": "arn:aws:s3:::BUCKETNAME/*"
 }
