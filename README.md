@@ -32,17 +32,6 @@ Then scroll down to `Block Public Access Settings for this bucket` section and u
 
 Then click `Create Bucket`
 
-### Enable Static Web Hosting
-Now that the bucket is setup, we will enable static web hosting so we can have access to our website once is deployed.
-
-For this click on the bucket we just created in the S3 Dashboard and then go to `Properties` tab and scroll down to `Static website hosting` and click `Edit`
-
-In this screen enable `Static Website hosting` and set the name of the `Index` document, in this case is `index.html`
-
-![S3 Enable Hosting](doc/images/s3-enable-static.png)
-
-For this basic setup of S3 web hosting these are all the configurations, now scroll down and click `Save Changes`.
-
 ### Enable Public Access
 Now we will be granting public access to our S3 bucket objects so the users can be able to reach the site.
 
@@ -69,7 +58,7 @@ In Edit Bucket Policy screen we will be adding the next JSON Permission:
 Now click on `Save Changes`
 ![S3 Permissions](doc/images/s3-permissions.png)
 
-Now that we granted access we need to setup our S3 bucket to host the webpage, for this go to the `Properties` tab in our S3 bucket and scroll down to the `Static Website Hosting` here click `Edit`.
+Now that we granted access to the S3 files, we need to setup our S3 bucket to host the webpage, for this go to the `Properties` tab in our S3 bucket and scroll down to the `Static Website Hosting` here click `Edit`.
 
 Now in this screen `Enable` Static Web Hosting and select `Host a Static Website`.
 
