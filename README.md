@@ -173,4 +173,4 @@ Now we will be granting access to our S3 Bucket to our Pipeline to write and del
 
 Then go to `Roles` and look for the automatic role generated for the pipeline, it should be called something like `AWSCodePipelineServiceRole-region-name`, then click on it.
 
-Once in is settings go to to the 
+Once in is settings go to to `Add Permissions` then `Attach Policies`
