@@ -71,7 +71,7 @@ Now click on `Save Changes`
 
 Now that we granted access we need to setup our S3 bucket to host the webpage, for this go to the `Properties` tab in our S3 bucket and scroll down to the `Static Website Hosting` here click `Edit`.
 
-Now inthis screen `Enable` Static Web Hosting and select `Host a Static Website`.
+Now in this screen `Enable` Static Web Hosting and select `Host a Static Website`.
 
 Down below under `Index document` input the name of the html file that we are going to host, in this case is `Index.html`
 
